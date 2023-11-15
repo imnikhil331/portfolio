@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="media-queries.css" />
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">John Doe</div>
+      <div class="logo">Nikhil Mahajan</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -21,7 +21,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">John Doe</div>
+      <div class="logo">Nikhil Mahajan</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -38,12 +38,12 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+        <img src="./assets/profile-pic.JPG" alt="Nikhil Mahajan profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">John Doe</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <h1 class="title">Nikhil Mahajan</h1>
+        <p class="section__text__p2">Software Developer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -60,13 +60,19 @@
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://linkedin.com/'"
+            onclick="window.open('https://www.linkedin.com/in/mahajannikhil1/', '_blank');"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/'"
+            onclick="window.open('https://github.com/imnikhil331', '_blank');"
+          />
+          <img
+            src="./assets/gitlab.png"
+            alt="My Gitlab profile"
+            class="icon"
+            onclick="window.open('https://gitlab.com/nikhilmahajan', '_blank');"
           />
         </div>
       </div>
@@ -91,7 +97,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+              <p>7+ years <br />Software Development</p>
             </div>
             <div class="details-container">
               <img
@@ -100,7 +106,7 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+              <p>Bachelor of Engineering, Computer Science Engineering</p>
             </div>
           </div>
           <div class="text-container">
@@ -352,7 +358,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+          <p><a href="mailto:mahajannikhil@live.com">mahajannikhil@live.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -360,7 +366,7 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/mahajannikhil1/" target="_blank">mahajannikhil1</a></p>
         </div>
       </div>
     </section>
@@ -375,8 +381,11 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+      <p>Copyright &#169; <span id="year"></span> Nikhil Mahajan. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
